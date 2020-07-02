@@ -1,10 +1,14 @@
-//*********************************************************
-// Programme en C pour le parcours Infixé d'un arbre binaire
-// Les éléments de l'arbre sont parcourus en ordre suivant
-// Sous-arbre gauche - Racine - Sous-arbre droit
-// Programme adapté depuis -> https://www.geeksforgeeks.org
-//*********************************************************
 
+# Parcours Infixé d'un arbre binaire
+
+## Programme en C pour le parcours infixé d'un arbre binaire
+Les éléments de l'arbre sont parcourus en ordre suivant
+1.Sous-arbre gauche
+2.Racine
+3.Sous-arbre droit
+
+## Code-source 
+```c
 #include <stdio.h> 
 #include <stdlib.h> 
   
@@ -61,3 +65,4 @@ int main()
      getchar(); 
      return 0; 
 } 
+
