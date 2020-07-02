@@ -1,5 +1,5 @@
 # Parcours préfixé d'un arbre binaire
-## Programme en C pour le parcours Infixé d'un arbre binaire
+## Programme en C pour le parcours Infixé d'un arbre binaire
 Les éléments de l'arbre sont parcourus en ordre suivant
 1. Racine
 2. Sous-arbre gauche 
