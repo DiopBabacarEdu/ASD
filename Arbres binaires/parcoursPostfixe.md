@@ -1,4 +1,4 @@
-#Parcours postfixé d'un arbre binaire
+# Parcours postfixé d'un arbre binaire
 ## Programme en C pour le parcours postfixé d'un arbre binaire
 Les éléments de l'arbre sont parcourus en ordre suivant
 1. Sous-arbre gauche 
@@ -14,7 +14,7 @@ Les éléments de l'arbre sont parcourus en ordre suivant
 /* Définition des noeuds de l'Arbre Binaire */
 struct node 
 { 
-     int data; 
+     int valeur; 
      struct node* gauche; 
      struct node* droite; 
 }; 
