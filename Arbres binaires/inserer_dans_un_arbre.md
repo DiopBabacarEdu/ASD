@@ -1,9 +1,9 @@
 # Insertion dans un arbre binaire
 Pour insérer une valeur dans un arbre, voici les étapes :
-* Commencer par la racine.
-* Comparer l'élément à insérer avec la racine, s'il est inférieur à la racine, appel récursif pour sous-arbre gauche, 
-* Sinon s'il est supérieur à la racine, appelrécursif pour sous-arbre droite,
-* Une fois atteint le bon emplacement, insérer simplement ce nœud à gauche (s'il est inférieur au courant), sinon à droite.
+1. Commencer par la racine.
+2. Comparer l'élément à insérer avec la racine, s'il est inférieur à la racine, appel récursif pour sous-arbre gauche, 
+3. Sinon s'il est supérieur à la racine, appelrécursif pour sous-arbre droite,
+4. Une fois atteint le bon emplacement, insérer simplement ce nœud à gauche (s'il est inférieur au courant), sinon à droite.
 
 ## Code source en C 
 ### Programme : Insertion dans un arbre de recherche
