@@ -3,9 +3,9 @@
 
 ## Programme en C pour le parcours infixé d'un arbre binaire
 Les éléments de l'arbre sont parcourus en ordre suivant
-1.Sous-arbre gauche
-2.Racine
-3.Sous-arbre droit
+1. Sous-arbre gauche
+2. Racine
+3. Sous-arbre droit
 
 ## Code-source 
 ```c
