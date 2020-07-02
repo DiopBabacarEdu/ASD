@@ -1,12 +1,13 @@
-//*********************************************************
-// Programme en C pour le parcours Infixé d'un arbre binaire
-// Les éléments de l'arbre sont parcourus en ordre suivant
-// 1.Sous-arbre gauche 
-// 2.Sous-arbre droit
-// 3.Racine
-// Programme adapté depuis -> https://www.geeksforgeeks.org
-//*********************************************************
+#Parcours postfixé d'un arbre binaire
+## Programme en C pour le parcours postfixé d'un arbre binaire
+Les éléments de l'arbre sont parcourus en ordre suivant
+1. Sous-arbre gauche 
+2. Sous-arbre droit
+3. Racine
 
+## Code-source
+
+```c
 #include <stdio.h> 
 #include <stdlib.h> 
   
@@ -14,20 +15,20 @@
 struct node 
 { 
      int data; 
-     struct node* left; 
-     struct node* right; 
+     struct node* gauche; 
+     struct node* droite; 
 }; 
   
 /* Fonction qui alloue un nouveau nœud avec la donnée
 et affecte à NULL aux pointeurs gauche et droit. */
 
-struct node* newNode(int dataInput) 
+struct node* nouveauNoeud(int dataInput) 
 { 
      struct node* node = (struct node*) 
                                   malloc(sizeof(struct node)); 
      node->data = dataInput; 
-     node->left = NULL; 
-     node->right = NULL; 
+     node->gauche = NULL; 
+     node->droite = NULL; 
   
      return(node); 
 } 
@@ -40,10 +41,10 @@ void parcoursPostfixe(struct node* node)
         return; 
   
      // Appel récursif sous-arbre gauche
-     parcoursPostfixe(node->left); 
+     parcoursPostfixe(node->gauche); 
   
      // Appel récursif sous-arbre droit 
-     parcoursPostfixe(node->right); 
+     parcoursPostfixe(node->droite); 
   
      // Afficher la valeur du noeud
      printf("%d ", node->data); 
@@ -52,11 +53,11 @@ void parcoursPostfixe(struct node* node)
 /* Programme principal*/
 int main() 
 { 
-     struct node *root  = newNode(1); 
-     root->left             = newNode(67); 
-     root->right           = newNode(54); 
-     root->left->left     = newNode(0); 
-     root->left->right   = newNode(5);   
+     struct node *root  = nouveauNoeud(1); 
+     root->gauche             = nouveauNoeud(67); 
+     root->droite           = nouveauNoeud(54); 
+     root->gauche->gauche     = nouveauNoeud(0); 
+     root->gauche->droite   = nouveauNoeud(5);   
   
      printf("\nParcours en Postfixé: \n"); 
      parcoursPostfixe(root); 
@@ -64,3 +65,4 @@ int main()
      getchar(); 
      return 0; 
 } 
+```
