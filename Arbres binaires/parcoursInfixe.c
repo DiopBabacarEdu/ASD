@@ -30,23 +30,6 @@ struct node* newNode(int dataInput)
      return(node); 
 } 
   
-/* Étant donné un arbre binaire, afficher ses nœuds en utilisant la
-   traversée post-ordre "ascendante". */
-void parcoursPostfixe(struct node* node) 
-{ 
-     if (node == NULL) 
-        return; 
-  
-     // Appel récursif sous-arbre gauche
-     parcoursPostfixe(node->left); 
-  
-     // Appel récursif sous-arbre droit 
-     parcoursPostfixe(node->right); 
-  
-     // Afficher la valeur du noeud
-     printf("%d ", node->data); 
-} 
-  
 /* Étant donné un arbre binaire, afficher ses nœuds dans l'ordre*/
 void parcoursInfixe(struct node* node) 
 { 
@@ -61,23 +44,7 @@ void parcoursInfixe(struct node* node)
   
      /* Appel récursif sous-arbre droit */
      parcoursInfixe(node->right); 
-} 
-  
-/* Étant donné un arbre binaire, afficher ses nœuds en utilisant un parcours préfixé */
-void parcoursPrefixe(struct node* node) 
-{ 
-     if (node == NULL) 
-          return; 
-  
-     /* Afficher la racine */
-     printf("%d ", node->data);   
-  
-     /* Appel récursif sous-arbre gauche */
-     parcoursPrefixe(node->left);   
-  
-     /* Appel récursif sous-arbre droit */
-     parcoursPrefixe(node->right); 
-}     
+}   
   
 /* Programme principal*/
 int main() 
@@ -88,14 +55,8 @@ int main()
      root->left->left     = newNode(0); 
      root->left->right   = newNode(5);  
   
-     printf("\nParcours en Préfixé: \n"); 
-     parcoursPrefixe(root); 
-  
      printf("\nParcours en Infixé  \n"); 
-     parcoursInfixe(root);   
-  
-     printf("\nParcours en Postfixé: \n"); 
-     parcoursPostfixe(root); 
+     parcoursInfixe(root); 
   
      getchar(); 
      return 0; 
