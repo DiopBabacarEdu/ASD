@@ -95,3 +95,5 @@ int main()
     return 0; 
 } 
 ```
+### Link
+https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
