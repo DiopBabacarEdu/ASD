@@ -96,4 +96,4 @@ int main()
 } 
 ```
 ### Link
-https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/
+https://www.geeksforgeeks.org/linked-list-set-1-introduction/
