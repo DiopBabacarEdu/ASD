@@ -14,8 +14,11 @@ struct node {
 
 struct node *tete = NULL;
 struct node *courant = NULL;
+```
 
-//afficher liste
+## afficher liste
+
+```c
 void afficherListe() {
    struct node *ptr = tete;
    printf("\n[ ");
@@ -27,8 +30,10 @@ void afficherListe() {
    }
    printf(" ]\n");
 }
+```
 
-//Insérer en tete
+## Insérer en tete
+```c
 void insererTete(int valeur) {
    //créer un noeud
    struct node *nouveauNoeud = (struct node*) malloc(sizeof(struct node));
@@ -41,8 +46,10 @@ void insererTete(int valeur) {
    //... et devient la nouvelle tête de liste
    tete = nouveauNoeud;
 }
+```
 
-//Supprimer en tête
+## Supprimer en tête et queue
+```c
 struct node* supprimerTete() {
 
    //Sauvegarder l'actuelle tête de liste quelques part
@@ -77,9 +84,10 @@ int supprimerQueue() {
     return retval;
 
 }
+```
 
-
-//Liste vide ?
+## Liste vide et taille de liste
+```c
 bool estVide() {
    return tete == NULL;
 }
@@ -94,8 +102,10 @@ int tailleListe() {
 	
    return taille;
 }
+```
 
-//Rechercher un élément dans la liste
+## Rechercher un élément dans la liste
+```c
 struct node* rechercher(int key) {
 
    //Commencer par la tête
@@ -121,8 +131,10 @@ struct node* rechercher(int key) {
    //Si trouvé, retourne le noeud courant
    return courant;
 }
+```
 
-//Suppression dans une liste 
+## Suppression dans une liste 
+```c
 struct node* supprimer(int key) {
 
    //Commencer ar la tête de liste
@@ -159,7 +171,10 @@ struct node* supprimer(int key) {
 	
    return courant;
 }
+```
+## Trier une liste
 
+```c
 void trier() {
 
    int i, j, k, tempvaleur;
@@ -185,7 +200,11 @@ void trier() {
       }
    }   
 }
+```
 
+## Renverser une liste
+
+```c
 void renverser(struct node** tete_ref) {
    struct node* precedent   = NULL;
    struct node* courant = *tete_ref;
@@ -200,7 +219,10 @@ void renverser(struct node** tete_ref) {
 	
    *tete_ref = precedent;
 }
+```
 
+## Fonction de test
+```c
 void main() {
    int elt, choix=1;
    int a=1;
